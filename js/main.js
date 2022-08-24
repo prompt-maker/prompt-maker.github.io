@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     widthInput.onchange = function(e) {
         widthSlider.value = e.target.value;
-        if ((e.target.value < 512 || e.target.value > 1024) && e.target.value > 0){
+        if ((e.target.value < 256 || e.target.value > 1024) && e.target.value > 0){
             e.target.value = Math.round(e.target.value/64)*64;
             if (e.target.value <= 0){
                 e.target.value = 64;
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     heightInput.onchange = function(e) {
         heightSlider.value = e.target.value;
-        if ((e.target.value < 512 || e.target.value > 1024) && e.target.value > 0){
+        if ((e.target.value < 256 || e.target.value > 1024) && e.target.value > 0){
             e.target.value = Math.round(e.target.value/64)*64;
             if (e.target.value <= 0){
                 e.target.value = 64;
