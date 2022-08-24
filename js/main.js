@@ -129,7 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     randomBtn.onclick = function(){
+        alert("test")
         seedInput.value = getRndInteger(1,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString();
+        alert("ff")
     }
 
     function getRndInteger(min, max) {
