@@ -1,5 +1,6 @@
 body{
     background-color: rgb(35, 21, 35) !important;
+    margin-bottom: 250px;
 }
 
 .form-control:valid {
