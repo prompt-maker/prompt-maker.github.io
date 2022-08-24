@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let imagesSlider = document.getElementById("images-slider");
     let seedInput = document.getElementById("seed-input");
     let toastMessage = document.getElementById("toast-body");
+    let randomBtn = document.getElementById("randomize-btn");
 
     widthSlider.oninput = function(e) {
         widthInput.value = e.target.value;
@@ -126,6 +127,14 @@ document.addEventListener('DOMContentLoaded', function() {
         /* Copy the text inside the text field */
         navigator.clipboard.writeText(textOutput.value);
     }
+
+    randomBtn.onclick = function(){
+        seedInput.value = getRndInteger(1,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString() + getRndInteger(0,9).toString();
+    }
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
 
 
 

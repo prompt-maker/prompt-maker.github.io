@@ -34,7 +34,7 @@
                         <div class="input-group">
                             <span class="input-group-text text-light bg-dark">Prompt:</span>
                             <textarea id="prompt-text" class="form-control bg-dark" aria-label="With textarea"></textarea>
-                            <button id="submit-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Dream</button>
+                            <button id="submit-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Generate</button>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                             <span class="text-secondary">The width of the generated image.</span>
                         </div>
                         <div class="row">
-                            <input id="width-slider" type="range" class="form-range" min="512" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
+                            <input id="width-slider" type="range" class="form-range" min="256" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
                         </div>
                     </div>
                     <div class="control-group">
@@ -71,7 +71,7 @@
                             <span class="text-secondary">The height of the generated image.</span>
                         </div>
                         <div class="row">
-                            <input id="height-slider" type="range" class="form-range" min="512" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
+                            <input id="height-slider" type="range" class="form-range" min="256" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
                         </div>
                     </div>
                     <div class="control-group">
@@ -87,7 +87,7 @@
                             <span class="text-secondary">Cfg scale adjusts how much the image will be like your prompt.<br>Higher values keep your image closer to your prompt.</span>
                         </div>
                         <div class="row">
-                            <input id="cfg-slider" type="range" class="form-range" min="1" max="20" step="1" id="customRange1" style="width: 97%; margin: auto;" value="7">
+                            <input id="cfg-slider" type="range" class="form-range" min="1" max="20" step="0.5" id="customRange1" style="width: 97%; margin: auto;" value="7">
                         </div>
                     </div>
                     <div class="control-group">
@@ -127,6 +127,7 @@
                             <div class="input-group input-group-sm mb-3" style="margin-top: 10px;">
                                 <span class="input-group-text text-light bg-dark" id="inputGroup-sizing-sm">Seed</span>
                                 <input id="seed-input" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                <button id="randomize-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Randomize</button>
                             </div>
                         </div>
                         <div class="row">
@@ -141,7 +142,7 @@
             <div class="input-group" style="margin-top: 15px;">
                 <span class="input-group-text text-light bg-dark">Output:</span>
                 <textarea id="prompt-output" class="form-control" aria-label="With textarea"></textarea>
-                <button id="load-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Load</button>
+                <!-- <button id="load-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Load</button> -->
             </div>
         </div>
     </div>
