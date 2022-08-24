@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://prompt-maker.github.io">
-    <img src="images/logo2.png" alt="Logo" width="80" height="80">
+    <img src="images/logo/logo2.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Prompt Maker</h3>
