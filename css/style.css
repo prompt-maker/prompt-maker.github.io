@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(35, 21, 35);;
+}
+
+.form-control:valid {
+    background-color:  #272727!important;
+  }
+
+.dark-color{
+
+    background-color: #323233;
+}
+
+.control-group{
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+}

@@ -8,8 +8,139 @@
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-primary">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container center-text align-middle">
+          <a class="navbar-brand" href="#" style="font-size: 40px;">
+            <img src="/images/logo/logo2.png" alt="" height="65" class="d-inline-block align-text-top">
+            Prompt Maker Utility
+          </a>
+          <a href="" class="navbar-brand" style="font-size: 25px;">for stable diffusion</a>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-lg" style="">
+                <div class="" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch;">
+                    <div style="flex-grow: 4; display: flex; align-items: center; justify-content: center;">
+                            <div class="bg-dark" style="width: 256px; height: 256px; display: flex; align-items: center; justify-content: center;">
+                                <img src="/images/logo/logo2.png" alt="" height="200" class="d-inline-block align-text-top">
+                            </div>
+                    </div>
+                    <div class="" style="padding: 15px;">
+                        <div class="input-group">
+                            <span class="input-group-text text-light bg-dark">Prompt:</span>
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Dream</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4" style="">
+                <div class="container bg-dark" style="max-width: 500px; padding: 25px;">
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-auto me-auto">
+                                <h5 class="align-middle center-text text-light">Width</h5>
+                            </div>
+                            <div class="col-auto input-group-sm">
+                                <input class="form-control" name="" id="" rows="1" style="width: 50px;" value="512"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">The width of the generated image.</span>
+                        </div>
+                        <div class="row">
+                            <input type="range" class="form-range" min="512" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-auto me-auto">
+                                <h5 class="align-middle center-text text-light">Height</h5>
+                            </div>
+                            <div class="col-auto input-group-sm">
+                                <input class="form-control" name="" id="" rows="1" style="width: 50px;" value="512"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">The height of the generated image.</span>
+                        </div>
+                        <div class="row">
+                            <input type="range" class="form-range" min="512" max="1024" step="64" id="customRange1" style="width: 97%; margin: auto;" value="512">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-auto me-auto">
+                                <h5 class="align-middle center-text text-light">Cfg Scale</h5>
+                            </div>
+                            <div class="col-auto input-group-sm">
+                                <input class="form-control" name="" id="" rows="1" style="width: 50px;" value="7"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">Cfg scale adjusts how much the image will be like your prompt.<br>Higher values keep your image closer to your prompt.</span>
+                        </div>
+                        <div class="row">
+                            <input type="range" class="form-range" min="2" max="20" step="1" id="customRange1" style="width: 97%; margin: auto;" value="7">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-auto me-auto">
+                                <h5 class="align-middle center-text text-light">Steps</h5>
+                            </div>
+                            <div class="col-auto input-group-sm">
+                                <input class="form-control" name="" id="" rows="1" style="width: 50px;" value="50"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">How many steps to spend generating (diffusing) your image.</span>
+                        </div>
+                        <div class="row">
+                            <input type="range" class="form-range" min="1" max="150" step="1" id="customRange1" style="width: 97%; margin: auto;" value="50">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-auto me-auto">
+                                <h5 class="align-middle center-text text-light">Number of Images</h5>
+                            </div>
+                            <div class="col-auto input-group-sm">
+                                <input class="form-control" name="" id="" rows="1" style="width: 50px;" value="4"></input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">To generate multiple images from one prompt.</span>
+                        </div>
+                        <div class="row">
+                            <input type="range" class="form-range" min="2" max="20" step="1" id="customRange1" style="width: 97%; margin: auto;" value="4">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="input-group input-group-sm mb-3" style="margin-top: 10px;">
+                                <span class="input-group-text text-light bg-dark" id="inputGroup-sizing-sm">Seed</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="text-secondary">The seed used to generate your image.<br>Enable to manually set a seed.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    
+
+    
+
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
