@@ -6,20 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         new bootstrap.Toast(item);
     });
 
-    let forms = document.querySelectorAll('.needs-validation');
 
-  // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-            }
 
-            form.classList.add('was-validated')
-        }, false)
-        })
     
     
     let imageDiv = document.getElementById("picture");
@@ -123,22 +111,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     submitBtn.onclick = function(){
-        if (textInput.value){
-            let myToastEl = document.getElementById('liveToast');
-            let myToast = bootstrap.Toast.getInstance(myToastEl);
-            toastMessage.innerHTML = "Copied Text Prompt";
-            myToast.show();
-            let textOutputData = `\"${textInput.value}\" -s${stepsInput.value} -W${widthInput.value} -H${heightInput.value} -C${cfgInput.value} -n${imagesInput.value}`;
-            if (seedInput.value){
-                textOutputData+= ` -S${seedInput.value}`;
-            }
-            textOutput.value = textOutputData;
-            textOutput.select();
-            textOutput.setSelectionRange(0, 99999); /* For mobile devices */
-    
-            /* Copy the text inside the text field */
-            navigator.clipboard.writeText(textOutput.value);
+        let myToastEl = document.getElementById('liveToast');
+        let myToast = bootstrap.Toast.getInstance(myToastEl);
+        toastMessage.innerHTML = "Copied Text Prompt";
+        myToast.show();
+        let textOutputData = `\"${textInput.value}\" -s${stepsInput.value} -W${widthInput.value} -H${heightInput.value} -C${cfgInput.value} -n${imagesInput.value}`;
+        if (seedInput.value){
+            textOutputData+= ` -S${seedInput.value}`;
         }
+        textOutput.value = textOutputData;
+        textOutput.select();
+        textOutput.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(textOutput.value);
     }
 
 
